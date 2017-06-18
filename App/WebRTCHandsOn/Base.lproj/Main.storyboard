@@ -75,38 +75,35 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXC-8G-v3k" customClass="RTCEAGLVideoView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-dj-luQ" customClass="RTCCameraPreviewView">
-                                        <rect key="frame" x="259" y="16" width="100" height="100"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="9Wg-8d-UKC"/>
-                                            <constraint firstAttribute="height" constant="100" id="SfB-qj-E2h"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-dj-luQ" customClass="RTCCameraPreviewView">
+                                <rect key="frame" x="259" y="36" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Bk2-dj-luQ" secondAttribute="trailing" constant="16" id="dkf-Vh-ucJ"/>
-                                    <constraint firstItem="Bk2-dj-luQ" firstAttribute="top" secondItem="uXC-8G-v3k" secondAttribute="top" constant="16" id="fFV-28-lhq"/>
+                                    <constraint firstAttribute="width" constant="100" id="9Wg-8d-UKC"/>
+                                    <constraint firstAttribute="height" constant="100" id="SfB-qj-E2h"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOS-oY-AKO">
-                                <rect key="frame" x="16" y="28" width="39" height="30"/>
+                                <rect key="frame" x="16" y="28" width="51" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="onClose:" destination="vXf-79-c79" eventType="touchUpInside" id="qlW-cW-l74"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-Gp-XrU">
-                                <rect key="frame" x="16" y="617" width="59" height="30"/>
+                                <rect key="frame" x="16" y="611" width="77" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Connect"/>
                                 <connections>
                                     <action selector="onConnect:" destination="vXf-79-c79" eventType="touchUpInside" id="3Hy-gF-kGE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-Xk-XJV">
-                                <rect key="frame" x="302" y="617" width="57" height="30"/>
+                                <rect key="frame" x="284" y="611" width="75" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="HangUp"/>
                                 <connections>
                                     <action selector="onHangUp:" destination="vXf-79-c79" eventType="touchUpInside" id="Ifa-eb-g1K"/>
@@ -117,11 +114,13 @@
                         <constraints>
                             <constraint firstItem="JOS-oY-AKO" firstAttribute="leading" secondItem="aFh-F0-xvB" secondAttribute="leading" constant="16" id="0US-x1-2Ut"/>
                             <constraint firstAttribute="trailing" secondItem="uXC-8G-v3k" secondAttribute="trailing" id="3HN-Lc-6fc"/>
+                            <constraint firstAttribute="trailing" secondItem="Bk2-dj-luQ" secondAttribute="trailing" constant="16" id="Arg-pc-VZx"/>
                             <constraint firstItem="QYf-HY-WbT" firstAttribute="top" secondItem="ChK-Xk-XJV" secondAttribute="bottom" constant="20" id="Fin-Wq-ZbK"/>
                             <constraint firstAttribute="trailing" secondItem="ChK-Xk-XJV" secondAttribute="trailing" constant="16" id="Loc-al-McN"/>
                             <constraint firstItem="QYf-HY-WbT" firstAttribute="top" secondItem="uXC-8G-v3k" secondAttribute="bottom" id="OzW-5V-QGr"/>
                             <constraint firstItem="JOS-oY-AKO" firstAttribute="top" secondItem="IyF-Fs-kFm" secondAttribute="bottom" constant="8" id="QEa-uk-xaL"/>
                             <constraint firstItem="QYf-HY-WbT" firstAttribute="top" secondItem="bOI-Gp-XrU" secondAttribute="bottom" constant="20" id="Sf6-Tz-P5C"/>
+                            <constraint firstItem="Bk2-dj-luQ" firstAttribute="top" secondItem="IyF-Fs-kFm" secondAttribute="bottom" constant="16" id="Ytb-gd-i0k"/>
                             <constraint firstItem="uXC-8G-v3k" firstAttribute="leading" secondItem="aFh-F0-xvB" secondAttribute="leading" id="gf7-u9-i6x"/>
                             <constraint firstItem="bOI-Gp-XrU" firstAttribute="leading" secondItem="aFh-F0-xvB" secondAttribute="leading" constant="16" id="oAZ-I6-rRg"/>
                             <constraint firstItem="uXC-8G-v3k" firstAttribute="top" secondItem="IyF-Fs-kFm" secondAttribute="bottom" id="opx-xg-NPg"/>

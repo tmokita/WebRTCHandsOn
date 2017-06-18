@@ -16,10 +16,24 @@ class ChatViewController: UIViewController, WebSocketDelegate {
     @IBOutlet weak var cameraPreview: RTCCameraPreviewView!
     
     var webSocket: WebSocket! = nil
+    var peerConnectionFactory: RTCPeerConnectionFactory! = nil
+    var audioSource: RTCAudioSource?
+    var videoSource: RTCAVFoundationVideoSource?
+    
+    deinit {
+        // 解放順に注意が必要
+        audioSource = nil
+        videoSource = nil
+        peerConnectionFactory = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        peerConnectionFactory = RTCPeerConnectionFactory()
+        
+        startVideo()
+        
         // WebSocket Initialize
         let url  = URL(string: "wss://conf.space/WebRTCHandsOnSig/tmokita")!
         webSocket = WebSocket(url: url)
@@ -67,4 +81,19 @@ class ChatViewController: UIViewController, WebSocketDelegate {
         LOG("data.count : \(data.count)")
     }
     
+    func startVideo() {
+        // この中身を書いていきます
+        
+        // 音声ソースの生成
+        let audioSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+        audioSource = peerConnectionFactory.audioSource(with: audioSourceConstraints)
+        
+        // 映像ソースの設定
+        let videoSourceConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
+        videoSource = peerConnectionFactory.avFoundationVideoSource(with: videoSourceConstraints)
+        
+        // 映像ソースをプレビューに設定
+        cameraPreview.captureSession = videoSource?.captureSession
+        
+    }
 }
