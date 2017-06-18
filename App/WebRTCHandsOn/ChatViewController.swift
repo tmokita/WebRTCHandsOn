@@ -23,6 +23,10 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     var peerConnection: RTCPeerConnection! = nil
     
     deinit {
+        if peerConnection != nil {
+            hangUp()
+        }
+
         // 解放順に注意が必要
         // 順番が違っているとぬるぽで落ちる
         // チャット画面が終了したか落ちたかわかりづらいので注意
@@ -55,6 +59,9 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     }
     
     @IBAction func onConnect(_ sender: Any) {
+        if peerConnection == nil {
+            peerConnection = prepareNewConnection()
+        }
     }
     
     @IBAction func onHangUp(_ sender: Any) {
@@ -130,7 +137,6 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     
     /** Called when the SignalingState changed. */
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {
-    
     }
     
     /** Called when media is received on a new stream from remote peer. */
@@ -148,7 +154,27 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     
     /** Called any time the IceConnectionState changes. */
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
-    
+        // PeerConnectionの接続状況が変化した際に呼ばれます
+        var state = ""
+        switch (newState) {
+        case RTCIceConnectionState.checking:
+            state = "checking"
+        case RTCIceConnectionState.completed:
+            state = "completed"
+        case RTCIceConnectionState.connected:
+            state = "connected"
+        case RTCIceConnectionState.closed:
+            state = "closed"
+            hangUp()
+        case RTCIceConnectionState.failed:
+            state = "failed"
+            hangUp()
+        case RTCIceConnectionState.disconnected:
+            state = "disconnected"
+        default:
+            break
+        }
+        LOG("ICE connection Status has changed to \(state)")
     }
     
     /** Called any time the IceGatheringState changes. */
@@ -168,5 +194,16 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     
     /** New data channel has been opened. */
     func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
+    }
+    
+    //
+    func hangUp() {
+        if peerConnection != nil {
+            if peerConnection.iceConnectionState != RTCIceConnectionState.closed {
+                peerConnection.close()
+            }
+            peerConnection = nil
+            LOG("peerConnection is closed.")
+        }
     }
 }
