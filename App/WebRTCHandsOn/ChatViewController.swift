@@ -166,7 +166,8 @@ extension ChatViewController: WebSocketDelegate {
         LOG("message: \(text)")
         
         // 受け取ったメッセージをJSONとしてパース
-        let jsonMessage = JSON.parse(text)
+        //let jsonMessage = JSON.parse(text) // 動くけど Deprecated らしい
+        let jsonMessage = JSON(parseJSON: text)
         let type = jsonMessage["type"].stringValue
         
         switch (type) {
