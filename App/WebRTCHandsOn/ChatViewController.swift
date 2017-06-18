@@ -11,7 +11,11 @@ import WebRTC
 import Starscream
 import SwiftyJSON
 
-class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnectionDelegate {
+class ChatViewController
+    : UIViewController
+    , WebSocketDelegate
+    , RTCPeerConnectionDelegate
+    , RTCEAGLVideoViewDelegate {
 
     @IBOutlet weak var remoteVideoView: RTCEAGLVideoView!
     @IBOutlet weak var cameraPreview: RTCCameraPreviewView!
@@ -39,6 +43,7 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        remoteVideoView.delegate = self
         peerConnectionFactory = RTCPeerConnectionFactory()
         
         startVideo()
@@ -71,6 +76,18 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     
     @IBAction func onHangUp(_ sender: Any) {
         hangUp()
+    }
+    
+    // MARK: - RTCEAGLVideoViewDelegate
+    func videoView(_ videoView: RTCEAGLVideoView, didChangeVideoSize size: CGSize) {
+        
+        let width = self.view.frame.width
+        let height = self.view.frame.width * size.height / size.width
+        videoView.frame = CGRect(
+            x: 0,
+            y: (self.view.frame.height - height) / 2,
+            width: width,
+            height: height)
     }
     
     // MARK: - LOG
