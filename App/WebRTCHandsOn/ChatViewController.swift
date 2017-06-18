@@ -19,7 +19,6 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     var peerConnectionFactory: RTCPeerConnectionFactory! = nil
     var audioSource: RTCAudioSource!
     var videoSource: RTCAVFoundationVideoSource!
-    
     var peerConnection: RTCPeerConnection! = nil
     
     deinit {
@@ -65,6 +64,7 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     }
     
     @IBAction func onHangUp(_ sender: Any) {
+        hangUp()
     }
     
     // MARK: - LOG
@@ -111,28 +111,30 @@ class ChatViewController: UIViewController, WebSocketDelegate, RTCPeerConnection
     // MARK: - RTCPeerConnectionDelegate
     func prepareNewConnection() -> RTCPeerConnection {
         
+        var connetion: RTCPeerConnection! = nil
+        
         let configuration = RTCConfiguration()
         configuration.iceServers = [RTCIceServer.init(urlStrings:["stun:stun.l.google.com:19302"])]
         // PeerConecctionの設定(今回はなし)
         let peerConnectionConstraints = RTCMediaConstraints(mandatoryConstraints: nil, optionalConstraints: nil)
         // PeerConnectionの初期化
-        peerConnection = peerConnectionFactory.peerConnection(with: configuration, constraints: peerConnectionConstraints, delegate: self)
+        connetion = peerConnectionFactory.peerConnection(with: configuration, constraints: peerConnectionConstraints, delegate: self)
         
         // 音声トラックの作成
         let localAudioTrack = peerConnectionFactory.audioTrack(with: audioSource, trackId: "ARDAMSa0")
         // PeerConnectionからAudioのSenderを作成
-        let audioSender = peerConnection.sender(withKind: kRTCMediaStreamTrackKindAudio, streamId: "ARDAMS")
+        let audioSender = connetion.sender(withKind: kRTCMediaStreamTrackKindAudio, streamId: "ARDAMS")
         // Senderにトラックを設定
         audioSender.track = localAudioTrack
         
         // 映像トラックの作成
         let localVideoTrack = peerConnectionFactory.videoTrack(with: videoSource, trackId: "ARDAMSv0")
         // PeerConnectionからVideoのSenderを作成
-        let videoSender = peerConnection.sender(withKind: kRTCMediaStreamTrackKindVideo, streamId: "ARDAMS")
+        let videoSender = connetion.sender(withKind: kRTCMediaStreamTrackKindVideo, streamId: "ARDAMS")
         // Senderにトラックを設定
         videoSender.track = localVideoTrack
         
-        return peerConnection
+        return connetion
     }
     
     /** Called when the SignalingState changed. */
