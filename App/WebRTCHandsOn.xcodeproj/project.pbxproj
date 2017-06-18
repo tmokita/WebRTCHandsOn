@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B349036C97D035291091F55A /* Pods_WebRTCHandsOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FAA444C58368AAC2B4F8CE /* Pods_WebRTCHandsOn.framework */; };
+		E62803211EF574A60046B270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62803201EF574A60046B270 /* AppDelegate.swift */; };
+		E62803231EF574A60046B270 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62803221EF574A60046B270 /* ViewController.swift */; };
+		E62803261EF574A60046B270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62803241EF574A60046B270 /* Main.storyboard */; };
+		E62803281EF574A60046B270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E62803271EF574A60046B270 /* Assets.xcassets */; };
+		E628032B1EF574A60046B270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62803291EF574A60046B270 /* LaunchScreen.storyboard */; };
+		E6B754C01EF578DF00FDA2DC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B754BF1EF578DF00FDA2DC /* ChatViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FA3A388433C879E5D2D492 /* Pods-WebRTCHandsOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebRTCHandsOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebRTCHandsOn/Pods-WebRTCHandsOn.debug.xcconfig"; sourceTree = "<group>"; };
+		59FAA444C58368AAC2B4F8CE /* Pods_WebRTCHandsOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebRTCHandsOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B4CBE8F91C1E0E27F20524 /* Pods-WebRTCHandsOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebRTCHandsOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebRTCHandsOn/Pods-WebRTCHandsOn.release.xcconfig"; sourceTree = "<group>"; };
+		E628031D1EF574A60046B270 /* WebRTCHandsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebRTCHandsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62803201EF574A60046B270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E62803221EF574A60046B270 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E62803251EF574A60046B270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E62803271EF574A60046B270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E628032A1EF574A60046B270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E628032C1EF574A60046B270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6B754BF1EF578DF00FDA2DC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E628031A1EF574A60046B270 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B349036C97D035291091F55A /* Pods_WebRTCHandsOn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DC111A1AC0295F70D2167C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59FAA444C58368AAC2B4F8CE /* Pods_WebRTCHandsOn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C8C296845079BAF519975D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03FA3A388433C879E5D2D492 /* Pods-WebRTCHandsOn.debug.xcconfig */,
+				83B4CBE8F91C1E0E27F20524 /* Pods-WebRTCHandsOn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E62803141EF574A60046B270 = {
+			isa = PBXGroup;
+			children = (
+				E628031F1EF574A60046B270 /* WebRTCHandsOn */,
+				E628031E1EF574A60046B270 /* Products */,
+				2C8C296845079BAF519975D8 /* Pods */,
+				0DC111A1AC0295F70D2167C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E628031E1EF574A60046B270 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E628031D1EF574A60046B270 /* WebRTCHandsOn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E628031F1EF574A60046B270 /* WebRTCHandsOn */ = {
+			isa = PBXGroup;
+			children = (
+				E62803201EF574A60046B270 /* AppDelegate.swift */,
+				E62803221EF574A60046B270 /* ViewController.swift */,
+				E62803241EF574A60046B270 /* Main.storyboard */,
+				E62803271EF574A60046B270 /* Assets.xcassets */,
+				E62803291EF574A60046B270 /* LaunchScreen.storyboard */,
+				E628032C1EF574A60046B270 /* Info.plist */,
+				E6B754BF1EF578DF00FDA2DC /* ChatViewController.swift */,
+			);
+			path = WebRTCHandsOn;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E628031C1EF574A60046B270 /* WebRTCHandsOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E628032F1EF574A60046B270 /* Build configuration list for PBXNativeTarget "WebRTCHandsOn" */;
+			buildPhases = (
+				65AB8B6347821AE9142DD1E9 /* [CP] Check Pods Manifest.lock */,
+				E62803191EF574A60046B270 /* Sources */,
+				E628031A1EF574A60046B270 /* Frameworks */,
+				E628031B1EF574A60046B270 /* Resources */,
+				6EBD8374DC03CFBDF4916983 /* [CP] Embed Pods Frameworks */,
+				27B2DEFBBB1804D9A7E41CC1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebRTCHandsOn;
+			productName = WebRTCHandsOn;
+			productReference = E628031D1EF574A60046B270 /* WebRTCHandsOn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E62803151EF574A60046B270 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "TOMOHIKO OKITA";
+				TargetAttributes = {
+					E628031C1EF574A60046B270 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JWTTB78962;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E62803181EF574A60046B270 /* Build configuration list for PBXProject "WebRTCHandsOn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E62803141EF574A60046B270;
+			productRefGroup = E628031E1EF574A60046B270 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E628031C1EF574A60046B270 /* WebRTCHandsOn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E628031B1EF574A60046B270 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E628032B1EF574A60046B270 /* LaunchScreen.storyboard in Resources */,
+				E62803281EF574A60046B270 /* Assets.xcassets in Resources */,
+				E62803261EF574A60046B270 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27B2DEFBBB1804D9A7E41CC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebRTCHandsOn/Pods-WebRTCHandsOn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65AB8B6347821AE9142DD1E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EBD8374DC03CFBDF4916983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebRTCHandsOn/Pods-WebRTCHandsOn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E62803191EF574A60046B270 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62803231EF574A60046B270 /* ViewController.swift in Sources */,
+				E6B754C01EF578DF00FDA2DC /* ChatViewController.swift in Sources */,
+				E62803211EF574A60046B270 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E62803241EF574A60046B270 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E62803251EF574A60046B270 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E62803291EF574A60046B270 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E628032A1EF574A60046B270 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E628032D1EF574A60046B270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E628032E1EF574A60046B270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E62803301EF574A60046B270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FA3A388433C879E5D2D492 /* Pods-WebRTCHandsOn.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JWTTB78962;
+				INFOPLIST_FILE = WebRTCHandsOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tmokita.WebRTCHandsOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E62803311EF574A60046B270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B4CBE8F91C1E0E27F20524 /* Pods-WebRTCHandsOn.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JWTTB78962;
+				INFOPLIST_FILE = WebRTCHandsOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tmokita.WebRTCHandsOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E62803181EF574A60046B270 /* Build configuration list for PBXProject "WebRTCHandsOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E628032D1EF574A60046B270 /* Debug */,
+				E628032E1EF574A60046B270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E628032F1EF574A60046B270 /* Build configuration list for PBXNativeTarget "WebRTCHandsOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62803301EF574A60046B270 /* Debug */,
+				E62803311EF574A60046B270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E62803151EF574A60046B270 /* Project object */;
+}
